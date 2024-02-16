@@ -20,13 +20,28 @@ const Counter = sequelize.define("Counter", {
   },
 });
 
+//xindingyi
+const rcmoof = sequelize.define("rcmoof", {
+  rcmoof: {
+    type: DataTypes.STRING,
+    allowNull: false,
+    defaultValue: 'tt',
+  },
+});
+
 // 数据库初始化方法
 async function init() {
   await Counter.sync({ alter: true });
-}
+};
+//ximncsh
+async function init() {
+  await rcmoof.sync({ alter: true });
+};
+
 
 // 导出初始化方法和模型
 module.exports = {
   init,
   Counter,
+  rcmoof,
 };
